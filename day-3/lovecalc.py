@@ -1,22 +1,21 @@
 # Taking input of names
 print("Welcome to the Love Calculator!")
-first_name = input("What is your name? \n").lower()
-second_name = input("What is their name? \n").lower()
+name1 = input("What is your name? \n").lower()
+name2 = input("What is their name? \n").lower()
 
 # Calculating "LOVE"
+combined_names = name1 + name2
+combined_names = combined_names.lower()
+t = combined_names.count('t')
+r = combined_names.count('r')
+u = combined_names.count('u')
+e = combined_names.count('e')
+l = combined_names.count('l')
+o = combined_names.count('o')
+v = combined_names.count('v')
 
-count_t = first_name.count("t") + second_name.count("t")
-count_r = first_name.count("r") + second_name.count("r")
-count_u = first_name.count("u") + second_name.count("u")
-count_e = first_name.count("e") + second_name.count("e")
-
-first_digit = count_t + count_r + count_u + count_e
-
-count_l = first_name.count("l") + second_name.count("l")
-count_o = first_name.count("o") + second_name.count("o")
-count_v = first_name.count("v") + second_name.count("v")
-
-second_digit = count_l + count_o + count_v + count_e
+first_digit = t + r + u + e
+second_digit = l + o + v + e
 
 love = (first_digit*10) + second_digit
 
@@ -27,5 +26,5 @@ if (love < 10) or (love > 90):
 elif (love >= 40) and (love <= 50):
     print(f'Your score is {love}, you are alright together.')
 else:
-    print(f'Your score is {love}')
+    print(f'Your score is {love}.')
 
